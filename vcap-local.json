@@ -1,0 +1,93 @@
+{
+    "Object-Storage": [
+        {
+            "credentials": {
+                "auth_url": "https://identity.open.softlayer.com",
+                "project": "object_storage_db8cff63_95ad_4b1e_8a6e_c9cc9313fb22",
+                "projectId": "227300dc42854b3c957e360d39ec8346",
+                "region": "dallas",
+                "userId": "535c3b71445f4521bad6dea6a7fb670d",
+                "username": "admin_74eeedcf4ff027af4f559e94730769d88e2ae9d3",
+                "password": "NQGZ7]{4JGuYe*^]",
+                "domainId": "62cda8210ff64bc0847826085986364d",
+                "domainName": "1394371",
+                "role": "admin"
+            },
+            "syslog_drain_url": null,
+            "volume_mounts": [],
+            "label": "Object-Storage",
+            "provider": null,
+            "plan": "standard",
+            "name": "CustomerInsights_Object Storage",
+            "tags": [
+                "storage",
+                "ibm_release",
+                "ibm_created"
+            ]
+        }
+    ],
+    "cloudantNoSQLDB": [
+        {
+            "credentials": {
+                "username": "b6beeda8-444f-4b1f-9ab4-95139192e611-bluemix",
+                "password": "df1e0b3bf6675b6b54a7466c5a32f710862d95627935131167e79e7833f35fc3",
+                "host": "b6beeda8-444f-4b1f-9ab4-95139192e611-bluemix.cloudant.com",
+                "port": 443,
+                "url": "https://b6beeda8-444f-4b1f-9ab4-95139192e611-bluemix:df1e0b3bf6675b6b54a7466c5a32f710862d95627935131167e79e7833f35fc3@b6beeda8-444f-4b1f-9ab4-95139192e611-bluemix.cloudant.com"
+            },
+            "syslog_drain_url": null,
+            "volume_mounts": [],
+            "label": "cloudantNoSQLDB",
+            "provider": null,
+            "plan": "Standard",
+            "name": "CustomerInsightDB",
+            "tags": [
+                "data_management",
+                "ibm_created",
+                "lite",
+                "ibm_dedicated_public"
+            ]
+        }
+    ],
+    "AvailabilityMonitoring": [
+        {
+            "credentials": {
+                "cred_url": "https://perfbroker.ng.bluemix.net",
+                "token": "FRH5VMMK5TDXlZaM1TU3NxStJN3kUahSZJgnfp4Ru8Pvpn5I4jVQfk6JXjXUqiI3qT2j3ZIdmy2+keswob9pkSvGBz6ccjJbgjWADggs3co="
+            },
+            "syslog_drain_url": null,
+            "volume_mounts": [],
+            "label": "AvailabilityMonitoring",
+            "provider": null,
+            "plan": "Lite",
+            "name": "availability-monitoring-auto",
+            "tags": [
+                "ibm_created",
+                "bluemix_extensions",
+                "dev_ops",
+                "lite"
+            ]
+        }
+    ],
+    "natural-language-understanding": [
+        {
+            "credentials": {
+                "url": "https://gateway.watsonplatform.net/natural-language-understanding/api",
+                "username": "6cee58a0-d79e-4563-bb51-fa8fb7713023",
+                "password": "qj8bCgmWftI1"
+              },
+            "syslog_drain_url": null,
+            "volume_mounts": [],
+            "label": "natural-language-understanding",
+            "provider": null,
+            "plan": "Standard",
+            "name": "CustomerInsight_NLU",
+            "tags": [
+                "watson",
+                "ibm_created",
+                "ibm_dedicated_public",
+                "lite"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: Customer-Insights
+  host: Customer-Insights
+  disk_quota: 1024M
+  services:
+  - CustomerInsight_NLU
+  - availability-monitoring-auto
+  - CustomerInsightDB
+  - CustomerInsights_Object Storage
+
