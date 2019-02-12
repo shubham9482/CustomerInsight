@@ -1,0 +1,458 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+}
+.logoclass{
+    margin: 0px!important;
+    padding: 5px 0!important;
+}
+.logoclass img{
+    margin-right: 30px;
+}
+.notofication{
+        border-right: 1px solid #e76049;
+    padding: 6px 15px;
+    margin-top: 15px;
+}
+.clear{
+    clear: both;
+    min-height:55px;
+}
+.btn-primary{
+    background: #171d20;
+        border-color: #273135;
+    border-radius: 0px;
+}
+.btn-secondary{
+    background: #fff;
+        border-color: #fff;
+    border-radius: 0px;
+    color: #000;
+    float: right;
+    padding: 0px 10px;
+}
+.btn-secondary:hover{
+    background: #fff;
+}
+.btn-primary:hover{
+    background: #273135;
+}
+
+.bodycontent h3{
+    margin: 0px;
+    padding: 0px 0 10px 0px;
+    color: #a5a5a5;
+    font-size: 20px;
+
+}
+.filters{
+    background: #fa7252;
+    /* padding: 10px 0px; */
+    /* margin-bottom: 15px; */
+}
+select{
+    padding: 5px;
+    width: 150px;
+    border-top: 0px solid #fff;
+     border-right: 0px solid #fff;
+     border-bottom: 1px solid #fff;
+     border-left: 0px solid #fff;
+    color: white;
+    background-color: transparent;
+    outline: 0px;
+    margin-right: 20px;
+}
+.select{
+    color: #6a6a6a;
+    width: 90px;
+    margin-left: 10px;
+}
+option{
+    background: #fff;
+    color: #000;
+}
+.content{background: #f2f2f2; padding: 20px;}
+.tile-style {
+    background: #fff;
+    padding: 7px 10px;
+    border-radius: 3px;
+    border: 1px solid #d5d6db;
+    margin-right: 15px;
+    transition: background-color 0.5s ease;
+}
+.col-xs-6 {
+    width: 49.33333333333333333%;
+}
+.hd-bar {
+    border-bottom: 1px solid #e9e9eb;
+    min-height: 40px;
+}
+.hd-bar h3 {
+    margin: 0px;
+    color: #202020;
+    font-size: 18px;
+}
+.hd-bar h3 img {
+    float: left;
+    margin: 0px;
+    padding: 0px 5px 0px 10px;
+}
+.col-md-8 {
+    width: 65.3333333%;
+}
+.hd-bar h3 span {
+    display: block;
+    float: left;
+    padding: 6px 20px 5px 0px;
+    border-right: 1px solid #cbcbcb;
+}
+.hd-bar {
+    border-bottom: 1px solid #e9e9eb;
+    min-height: 40px;
+}
+.headding-sd {
+    float: left !important;
+    color: #5d5d5d;
+    font-size: 12px;
+    padding: 10px 20px!important;
+    margin-left: 32%;
+}
+.modal-header{
+    padding: 10px;
+    height: 210px;
+    width: 100%;
+    margin-top: -10px
+}
+.icons{
+    float: right;
+    margin: 6px;
+}
+.alert-filter-div {
+    font-size: 12px;
+    padding: 9px 0px 0px 3%;
+}
+.table{
+    height: 200px;
+}
+.alert-filter-div .Critical, .Major, .Minor {
+    display: block;
+    float: left;
+    color: #bc0c0c;
+    border-right: 1px solid #d5d6db;
+    margin-right: 20px;
+}
+.alert-filter-div img {
+    margin: -2px 0px 0px 0px;
+    padding: 0px 15px 0px 5px;
+}
+.alert-filter-div .Major {
+    color: #e1610b;
+}
+.alert-filter-div .Minor {
+    color: #e8ae10;
+    border-right: 0px solid #d5d6db;
+}
+.data-table {
+    width: 100%;
+    height: 230px;
+}
+table {
+    border: 0px solid #ccc;
+    margin: 0;
+    padding: 0;
+    width: 106%;
+    table-layout: fixed;
+    overflow: hidden;
+}
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+table tr {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: .35em;
+}
+table th {
+    padding: 12px .625em;
+    text-align: center;
+}
+table td {
+    padding: 12px .625em;
+    text-align: center;
+    font-size: 12px;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: none;
+    color: #0093d8;
+}
+@media (max-width: 767px) {
+    body{
+        display: none;
+    }
+}
+/*@media (max-width: 1300px) {
+    body{
+        zoom:80%
+    }
+}*/
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+    table caption {
+        font-size: 1.3em;
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: center;
+    }
+    table td:before {
+        /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+        
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+/*
+ *  STYLE 3
+ */
+
+.scrollbar {
+    float: left;
+    height: 230px;
+    background: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+footer {
+    background: #fa7252;
+    padding: 8px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width:100%
+}
+#style-3::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+#style-3::-webkit-scrollbar {
+    width: 6px;
+    background-color: #fff;
+}
+#style-3::-webkit-scrollbar-thumb {
+    background-color: #c9c9c9;
+    border-radius: 10px;
+}
+.force-overflow-new {
+    padding: 8px 0px;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 13px;
+    color: #202020;
+}
+.force-overflow-new p {
+    margin: 0px;
+    padding: 0px 10px 5px 10px;
+    line-height: 21px;
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+}
+
+/* You can add global styles to this file, and also import other style files */
+/* Line Graph CSS */
+.text{
+    size:14px;
+    fill:#676161;
+    letter-spacing: 3px;
+    font-style:italic;
+    font-size:14px
+    
+    }
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 3px;
+    }
+    .toolti{
+      size:11px;
+      fill:#453D3D;
+      letter-spacing: 1px;
+      font-style:italic;
+      font-size:11px;
+    }
+    /* .axis line{ */
+    /* stroke:red; */
+    /* } */
+
+  
+    .arc text {
+      font: 10px sans-serif;
+      text-anchor: middle;
+    }
+    
+    .arc path {
+      stroke: #fff;
+    }
+
+.nvtooltip table{
+    width:200px
+}
+
+#doughnutContainer svg
+{
+    margin:auto
+}
+
+#pichartContainer svg
+{
+    margin:auto
+}
+
+.expand:hover
+{
+    opacity: .6;
+}
+
+.nvd3.nv-pie .nv-pie-title{
+    fill:black !important;
+    font-weight: bold !important
+}
+
+#doughnutContainer .nvd3.nv-pie
+{
+    -webkit-transform:translate(0px,-20px) !important;
+    transform:translate(0px,-20px) !important
+}
+
+#doughnutContainer .nv-pieChart .nv-legendWrap.nvd3-svg
+{
+    -webkit-transform:translate(20px,150px) !important;
+    transform:translate(20px,150px) !important
+}
+
+#pichartContainer .nvd3.nv-pie g .nv-pie
+{
+    -webkit-transform:translate(200px,90px) !important;
+    transform:translate(200px,90px) !important;
+}
+
+#pichartContainer .nv-pieChart .nv-legendWrap.nvd3-svg 
+{
+    -webkit-transform:translate(-20px,-20px) !important;
+    transform:translate(-20px,-20px) !important
+}
+/* .nvd3-svg.nv-multiBarWithLegend
+{
+    transform:translate(70,40) !important
+}
+
+.nvd3-svg.nv-multiBarWithLegend .nv-legendWrap
+{
+    transform:translate(50,-30) !important
+} */
+
+/* .nv-legendWrap{
+    transform: translate(200,120)
+} */
+
+.fade.in{
+    display: block !important;
+}
+
+.modal-header{
+    height:50px !important;
+}
+
+.modal-body{
+    height: 500px;
+    overflow-y: auto;
+  }
+
+.modal-dialog{
+    overflow-y: initial !important
+}
+
+.advice {
+    border-top:1px solid rgb(217, 217, 217);
+}
+.adviceHeader {
+    margin-top: 0px;
+}
+
+/* comp specific styles */
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+.rowGraph {
+   
+    padding: 10px;
+    width: 100%;
+    margin-top: -10px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.row {
+    display: -webkit-flex;
+    display: flex;
+} 
+
+.help-block {
+    font-size: 12px;
+}
+
+a.tooltip-inner {
+    max-width: 350px;
+}

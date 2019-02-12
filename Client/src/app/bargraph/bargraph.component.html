@@ -1,0 +1,27 @@
+<div class="hd-bar">
+  <h3>
+    <img src="../../assets/img/2.png" alt="">
+    <span>Feedback vs Score</span>
+
+  </h3>
+  <select class="select" style="width:110px;" [(ngModel)]="filter" (ngModelChange)="onFilter($event)" [hidden]="hideSelect">
+    <option value="quarter">Last Quarter</option>
+    <option value="month">Last Month</option>
+    <!-- <option>Filter By Week</option> -->
+          </select>
+  <!-- <select class="selectpicker" [(ngModel)]="entityType" (ngModelChange)="onChange($event)">
+              <option *ngFor="let entity of entities" [ngValue]="entity" >{{entity}}</option>                        
+          </select> -->
+  <button type="button" class="btn btn-default" (click)="goBack()" style="margin: 0;float:right" *ngIf="disableBtn"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Back</button>
+  <div class="icons">
+    <!-- <input class="expand" (click)="openDialog(chartType)" type="image" src="../../assets/img/icon.png" style="margin-right:10px;" -->
+    <!-- <img src="../assets/img/3.png"> -->
+  </div>
+
+</div>
+<div class="chart" id="chart">
+  <!-- <iframe src="bar-chart.html" style="border:none; width:100%; height:200px;"></iframe> -->
+  <div id="barGraphContainer" style="height: 200px; width: 100%">
+    <app-nvd3 [options]="options" [data]="data"></app-nvd3>
+  </div>
+</div>

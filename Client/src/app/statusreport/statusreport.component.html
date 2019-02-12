@@ -1,0 +1,130 @@
+<div class="hd-bar">
+  <h3>
+    <img src="../../assets/img/2.png" alt="">
+    <span>Project Details</span>
+
+  </h3>
+  <!-- <select class="select" style="width:124px;float:left;">
+                  <option>Filter by Week</option>
+              </select> -->
+  <div class="alert-filter-div">
+    <span><a class="Critical" (click)="sortFeedbacks()" style="padding-left: 10px;cursor: pointer;text-decoration: none">Needs Attention ({{attention}})  <img src="../../assets/img/Critical-icon.png" alt=""></a></span>
+
+  </div>
+  <!-- <div class="form-group">
+    <div class="col-md-6" >
+      <input type="text" [(ngModel)]="searchText" 
+             class="form-control" placeholder="Search By Category" />
+    </div>
+  </div> -->
+
+  <!-- <div class="icons" style="margin-top:-5px">
+    <img src="../../assets/img/icon.png" style="margin-right:10px;">
+    <img src="../assets/img/3.png">
+  </div> -->
+
+</div>
+<div class="table">
+  <div id="style-3" class="data-table scrollbar">
+    <div class="force-overflow">
+      <table id="statusData" class="table table-hover">
+        <thead>
+          <tr>
+            <!-- <th scope="col">Id</th> -->
+            <th scope="col" [hidden]="project">Reported Date</th> 
+            <th scope="col">Project</th>
+            <th scope="col">{{level}}</th>
+            <th scope="col">{{subLevel1}}</th>
+            <th scope="col">{{subLevel2}}</th>
+            <th scope="col" [hidden]="project">Types</th> 
+            <th scope="col" [hidden]="project">SubTypes</th>
+            <th scope="col">{{scoreString}}</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr [hidden]="emailUploadDetected" >
+              <td data-label="date">{{dataFormUpload.date}}</td>
+              <td data-label="project">{{dataFormUpload.project_id}}</td>
+              <td data-label="ou">{{dataFormUpload.OU_id}}</td>
+              <td data-label="bu">{{dataFormUpload.BU_id}}</td>
+              <td data-label="du">{{dataFormUpload.DU_id}}</td>
+              <td data-label="score">{{dataFormUpload.score}}</td>
+              <td data-label="Description"><img src="../../assets/img/next-icon.png"></td>
+          </tr>   [style.background]="feedback.color"-->
+
+          <tr *ngFor="let feedback of feedbacks">
+            <!-- <td data-label="date">{{feedback.rowNo}}</td> -->
+            <td scope="col" [hidden]="project">{{feedback.date}}</td>
+            <td data-label="project" align="center">{{feedback.project_name}}</td>
+            <td data-label="ou" align="center">{{feedback.level}}</td>
+            <td data-label="bu" align="center">{{feedback.sublevel1}}</td>
+            <td data-label="du" align="center"><a rel="tooltip" title={{feedback.sublevel2}} style="text-decoration:none;color:black">{{feedback.sublevel2}}</a></td>
+            <td scope="col" [hidden]="project">{{feedback.types}}</td>
+            <td scope="col" [hidden]="project"><a rel="tooltip" title={{feedback.subTypes}} style="text-decoration:none;color:black">{{feedback.subTypes}}</a></td>
+            <td data-label="score" align="center">{{feedback.score}}</td>
+            <td data-label="Description" align="center"><img src="../../assets/img/next-icon.png" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false"
+                (click)="actionPopup(feedback.id)"></td>
+            <!-- (click)="action(feedback.id)" -->
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:#fa7252">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 style="color:white">Better Performing Projects</h4>
+      </div>
+      <div class="modal-body">
+        <div style="width:100%;" [hidden]="loading"><img style="margin:auto;display:block" src="../../assets/img/Loading_icon.gif"></div>
+        <table id="statusData" class="table table-hover" [hidden]="tableLoading" style="margin-bottom: 5px;">
+
+          <thead>
+            <tr>
+              <th scope="col" width="110">Project ID</th>
+              <th scope="col">Domain</th>
+              <th scope="col">Tech Stack</th>
+              <th scope="col">Team Size</th>
+              <th scope="col">Score</th>
+              <th scope="col">Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let attribute of projAttributes">
+              <td data-label="date">{{attribute.project_id}}</td>
+              <td data-label="date">{{attribute.domain}}</td>
+              <td data-label="project">{{attribute.stack}}</td>
+              <td data-label="ou">{{attribute.size}}</td>
+              <td data-label="bu">{{attribute.score}}</td>
+              <td data-label="du">{{attribute.contact}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="advice" [hidden]="tableLoading">
+          <h4 class="adviceHeader" style="margin-top: 20px;margin-bottom: 20px;">Watson Advice</h4>
+          <div *ngFor="let advice of advices">
+            <div style="display:block" [hidden]="notDefault">
+              <h5 style="color: #0093d8">{{advice.subType}}</h5>
+              <ul ><li *ngFor="let adviceStr of advice.advicesArr">{{adviceStr}}</li></ul>
+            </div>
+            <div style="display:block" [hidden]="default">
+              <ul [hidden]="default"><li [hidden]="default">{{advice}}</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

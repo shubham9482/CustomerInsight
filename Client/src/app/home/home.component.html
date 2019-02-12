@@ -1,0 +1,89 @@
+<nav class="navbar navbar-default navbar-fixed-top mat-app-background">
+    <div class="container" style="
+                padding-left: 0px;
+                padding-right: 0px;
+            ">
+        <div class="navbar-header">
+
+            <img src="../assets/img/logo.png">
+
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="img">
+                    <button type="button" class="btn btn-default col-md-12" (click)="loadForm()" ><img src="../assets/img/upload.png" style="margin-right:6px;margin-top: 5px"/>
+                                    <span style="font-weight:bold">Upload Email</span></button>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome Vijesh<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <!-- <li><a href="#">Change Password</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Setting</a></li> -->
+                        <!-- <li role="separator" class="divider"></li> -->
+                        <li><a [routerLink]="['/']">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="clear"></div>
+<div class="filters">
+    <div class="container">
+        <div class="row">
+            <h3 style="color:white">CSAT Dashboard</h3>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 tile-style">
+                <app-bargraph></app-bargraph>
+            </div>
+            <div class="col-md-6 tile-style" style="margin:0px;">
+                <div class="hd-bar">
+                    <h3>
+                        <img src="../assets/img/2.png" alt="">
+                        <span>CSAT Score</span>
+
+                    </h3>
+
+                    <div class="icons">
+
+                    </div>
+
+                </div>
+                <a routerLink="/details" style="text-decoration:none"> 
+                    <div class="chart">
+                        <app-doughnut></app-doughnut>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top:15px;">
+        <div class="row">
+            <div class="col-md-12 tile-style" style="margin:0">
+                <app-statusreport></app-statusreport>
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+                © 2017 Persistent Systems
+            </div>
+        </div>
+    </div>
+
+</footer>

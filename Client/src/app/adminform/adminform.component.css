@@ -1,0 +1,50 @@
+/* .red{
+  color:red;
+}
+.form-area
+{
+  background-color: #FAFAFA;
+	padding: 10px 40px 60px;
+	margin: 10px 0px 60px;
+	border: 1px solid GREY;
+}
+.container{
+	padding-top: 50px;
+	padding-left:25%;
+	align-self: center;
+}
+.text{
+  size:14px;
+  fill:red;
+  letter-spacing: 3px;
+  font-style:italic;
+  font-size:14px
+}
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+.tooltip{
+  text-decoration:undrline;
+} */
+/* .axis line{ */
+/* stroke:red; */
+/* } */
+/* .axis path{
+  stroke:red;
+  stroke-width: 3px;
+} */
+.form-group.required .control-label:after { 
+  content:"*";
+  color:red;
+  position: absolute;
+  font-weight: normal;
+  font-size: 20px;              
+}
+
+
